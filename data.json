@@ -1,0 +1,114 @@
+{
+    "users": {
+        "admin": {
+            "rol": "admin",
+            "wallet": "gAAAAABqFYD9a6BwNoBOjlp9aaMNKTJlX6uLpOgZJrrZV1hLCjpkL2aa8vSEQwfnZ7r8zlD_61mqlaSxvYwbJ45nab6jkFZpXw==",
+            "cart": [],
+            "purchased": []
+        },
+        "cliente1": {
+            "rol": "normal_user",
+            "wallet": "gAAAAABqGbcejNuOpW1r-vnBQIpvqgaX7Od9mWcXsWWo9TXtAcu9sy8AU-I1ddtt3NQAzyfbvhBEMpAmMGcgKnKGPweuruwy_w==",
+            "cart": [],
+            "purchased": [
+                {
+                    "id": 1,
+                    "name": "Laptop GodoyGamer X-Pro",
+                    "price": 800,
+                    "seller": "empresa1",
+                    "description": "Potencia extrema para los juegos m\u00e1s exigentes.",
+                    "img": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+                },
+                {
+                    "id": 3,
+                    "name": "Teclado Mec\u00e1nico RGB",
+                    "price": 120,
+                    "seller": "empresa1",
+                    "description": "Switches \u00f3pticos s\u00faper r\u00e1pidos ideales para e-Sports.",
+                    "img": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&q=80"
+                }
+            ]
+        },
+        "cliente2": {
+            "rol": "normal_user",
+            "wallet": "gAAAAABqGbceK637j3g0BNIKf2tHXQ9tHRlGg0XuhHXNd6bqyusBSVvD7wroYCydBA_7gbvfet6Fo5PbyOwSlb9mdW9TR8CufQ==",
+            "cart": [
+                {
+                    "id": 3,
+                    "name": "Teclado Mec\u00e1nico RGB",
+                    "price": 120,
+                    "seller": "empresa1",
+                    "description": "Switches \u00f3pticos s\u00faper r\u00e1pidos ideales para e-Sports.",
+                    "img": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&q=80"
+                }
+            ],
+            "purchased": []
+        },
+        "empresa1": {
+            "rol": "company",
+            "wallet": "gAAAAABqFf0kpJw2pespbSptg-0ZjRdziFF7HJE24sMMJ1mhuV5C9W9x13IaFjTbGXQbU9N_OeaA_WYRPlHIRGqNTc7VyEAOHg==",
+            "cart": [],
+            "purchased": []
+        },
+        "empresa2": {
+            "rol": "company",
+            "wallet": "gAAAAABqFYD9hiL4C52O0B7Pi9c0TeMepaR-ziIxs2a_gr6Jj7RwlVA_jALm-wqUoef5cs4_nIsuTkZ1z_tMjjHLTxBhh06rbA==",
+            "cart": [],
+            "purchased": []
+        },
+        "hacker_user": {
+            "rol": "normal_user",
+            "wallet": "gAAAAABqFYD9a6BwNoBOjlp9aaMNKTJlX6uLpOgZJrrZV1hLCjpkL2aa8vSEQwfnZ7r8zlD_61mqlaSxvYwbJ45nab6jkFZpXw==",
+            "cart": [],
+            "purchased": []
+        },
+        "scam_company": {
+            "rol": "company",
+            "wallet": "gAAAAABqFYD9a6BwNoBOjlp9aaMNKTJlX6uLpOgZJrrZV1hLCjpkL2aa8vSEQwfnZ7r8zlD_61mqlaSxvYwbJ45nab6jkFZpXw==",
+            "cart": [],
+            "purchased": []
+        }
+    },
+    "products": [
+        {
+            "id": 1,
+            "name": "Laptop GodoyGamer X-Pro",
+            "price": 798,
+            "seller": "empresa1",
+            "description": "Potencia extrema para los juegos m\u00e1s exigentes.",
+            "img": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
+        },
+        {
+            "id": 2,
+            "name": "Auriculares Inal\u00e1mbricos SoundGodoy",
+            "price": 150,
+            "seller": "empresa2",
+            "description": "Cancelaci\u00f3n de ruido activa y bater\u00eda de 40 horas.",
+            "img": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800&q=80"
+        },
+        {
+            "id": 3,
+            "name": "Teclado Mec\u00e1nico RGB",
+            "price": 120,
+            "seller": "empresa1",
+            "description": "Switches \u00f3pticos s\u00faper r\u00e1pidos ideales para e-Sports.",
+            "img": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&q=80"
+        },
+        {
+            "id": 4,
+            "name": "Monitor Curvo 144Hz",
+            "price": 300,
+            "seller": "empresa2",
+            "description": "Inmersi\u00f3n total con colores vibrantes y tiempo de respuesta de 1ms.",
+            "img": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80"
+        },
+        {
+            "id": 999,
+            "name": "Suscripci\u00f3n Premium Falsa",
+            "price": 5000,
+            "seller": "scam_company",
+            "description": "Si compras esto, te robo todo tu dinero.",
+            "img": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80"
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="p-4 text-center bg-white rounded-3 shadow-sm border-top border-danger border-4 mb-5">
+    <h1 class="text-body-emphasis fw-bold mb-2">🛡️ Centro de Control de Seguridad (SIEM)</h1>
+    <p class="lead text-muted">Auditoría criptográfica de logs e intercepción de amenazas perimetrales en tiempo real.</p>
+</div>
+
+<div class="row g-4">
+    <div class="col-12">
+        {% if tamper_detected %}
+        <div class="card bg-danger text-white shadow-lg border-0 p-4 text-center">
+            <h2 class="fw-bold mb-2">🚨 ¡SISTEMA MANIPULADO DETECTADO!</h2>
+            <p class="mb-0 fs-5">El módulo criptográfico ha detectado modificaciones no autorizadas en el archivo físico <CD>secure_log.txt</CD>. Las firmas HMAC no coinciden.</p>
+        </div>
+        {% else %}
+        <div class="card bg-success text-white shadow-sm border-0 p-4 text-center">
+            <h2 class="fw-bold mb-2">🟢 INTEGRIDAD DEL SISTEMA GARANTIZADA</h2>
+            <p class="mb-0 fs-5">Todas las firmas digitales de los logs coinciden con la clave secreta del servidor. No se detecta alteración de registros (Cumplimiento de No-Repudio).</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="col-12 col-lg-5">
+        <h4 class="fw-bold text-dark mb-3">Alertas Recientes e Incidentes</h4>
+        <div class="d-flex flex-column gap-3" style="max-height: 500px; overflow-y: auto;">
+            {% for alert in alerts %}
+            <div class="card shadow-sm border-0 border-start border-4 p-3 {% if alert.level == 'CRITICAL' %}border-danger bg-danger-subtle{% else %}border-warning bg-warning-subtle{% endif %}">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="badge {% if alert.level == 'CRITICAL' %}bg-danger{% else %}bg-warning text-dark{% endif %} fw-bold">{{ alert.level }}</span>
+                    <small class="text-muted fw-bold">{{ alert.timestamp }}</small>
+                </div>
+                <p class="mb-0 text-dark small fw-semibold">{{ alert.message }}</p>
+            </div>
+            {% else %}
+            <div class="text-center py-4 bg-white rounded border text-muted">No se han registrado incidentes anómalos hoy.</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-7">
+        <h4 class="fw-bold text-dark mb-3">Visor de Logs Auditados (Descifrado Seguro)</h4>
+        <div class="card bg-dark text-light p-3 shadow-sm" style="max-height: 500px; overflow-y: auto;">
+            <pre class="mb-0 font-monospace small" style="white-space: pre-wrap; word-wrap: break-word;">
+{% for log in logs %}
+<span class="{% if '❌' in log %}text-danger fw-bold{% else %}text-success{% endif %}">{{ log }}</span>
+{% else %}
+[LOG VACÍO] No hay registros en el archivo de auditoría.
+{% endfor %}
+            </pre>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

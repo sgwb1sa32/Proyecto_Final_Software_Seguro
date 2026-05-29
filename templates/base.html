@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GODOYCRUZ Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .navbar-brand { font-weight: 800; letter-spacing: 2px; color: #ffc107 !important; }
+        .wallet-badge { background-color: #ffc107; color: #212529; font-weight: bold; padding: 0.5rem 1rem; border-radius: 50px; }
+        /* Animación para la alerta roja del admin */
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container"> 
+            <a class="navbar-brand" href="/">GODOYCRUZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center gap-3">
+                    
+                    {% if user_data.rol == 'admin' %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-danger d-flex align-items-center" href="/admin/security">
+                            🛡️ Seguridad 
+                            {% if security_alerts and security_alerts|length > 0 %}
+                                <span class="badge bg-danger ms-1 animate-pulse">{{ security_alerts|length }}</span>
+                            {% endif %}
+                        </a>
+                    </li>
+                    {% endif %}
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/wallet">💳 Mi Wallet</a>
+                    </li>
+                    
+                    {% if user_data.rol == 'company' %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="/company">🏢 Mis Productos</a>
+                    </li>
+                    {% endif %}
+
+                    {% if user_data.rol == 'normal_user' %}
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold d-flex align-items-center" href="/cart">
+                            🛒 Carrito 
+                            <span class="badge bg-danger ms-2 rounded-pill">{{ user_data.cart|length }}</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                    <li class="nav-item">
+                        <select onchange="location = this.value;" class="form-select form-select-sm fw-bold">
+                            {% for u in all_users %}
+                            <option value="{{ url_for('switch_user', username=u) }}" {% if u == current_user %}selected{% endif %}>
+                                👤 {{ u }} ({{ user_data.rol }})
+                            </option>
+                            {% endfor %}
+                        </select>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <div class="wallet-badge shadow-sm">
+                            🪙 {{ wallet_balance }} GC
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 mb-5">
+        
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ 'success' if category == 'success' else 'danger' if category == 'error' else 'info' }} alert-dismissible fade show shadow-sm" role="alert">
+                        <strong>{{ message }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+        {% block content %}{% endblock %}
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

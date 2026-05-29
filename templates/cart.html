@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="p-5 text-center bg-white rounded-3 shadow-sm border-top border-warning border-4 mb-5">
+    <h1 class="text-body-emphasis fw-bold mb-3">Tu Carrito de Compra</h1>
+    <p class="lead text-muted">Revisa tus artículos antes de proceder al procesamiento de tu pago seguro.</p>
+    
+    {% if cart %}
+    <div class="d-inline-flex align-items-center bg-light p-3 rounded-pill shadow-sm border mt-3">
+        <span class="fs-4 text-secondary me-3">Total del Pedido:</span>
+        <span class="display-6 fw-bold text-warning mb-0">🪙 {{ total }} GC</span>
+    </div>
+    {% endif %}
+</div>
+
+{% if cart %}
+<div class="row g-4 mb-5">
+    
+    <div class="col-12 col-lg-8">
+        <h4 class="fw-bold mb-3 text-dark">Artículos seleccionados ({{ cart|length }})</h4>
+        <div class="row g-3">
+            {% for item in cart %}
+            <div class="col-12">
+                <div class="card shadow-sm border-0 border-start border-dark border-5 p-3 transition-transform">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                        
+                        <div class="d-flex align-items-center">
+                            <img src="{{ item.img }}" class="rounded me-3 shadow-sm" style="width: 80px; height: 80px; object-fit: cover;">
+                            <div>
+                                <h5 class="mb-1 fw-bold text-dark">{{ item.name }}</h5>
+                                <p class="mb-0 text-muted small">Vendedor: <span class="text-primary fw-bold">@{{ item.seller }}</span></p>
+                                <p class="mb-0 text-secondary small text-truncate d-none d-sm-block" style="max-width: 350px;">{{ item.description }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="text-end">
+                            <span class="fs-4 fw-bold text-warning">🪙 {{ item.price }} GC</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+        <h4 class="fw-bold mb-3 text-dark">Resumen de Cuenta</h4>
+        <div class="card shadow border-0 border-top border-success border-4 p-4 sticky-top" style="top: 20px; z-index: 10;">
+            
+            <div class="d-flex justify-content-between align-items-center mb-3 pb-3 border-bottom">
+                <span class="text-secondary fw-bold">Subtotal:</span>
+                <span class="fw-bold text-dark">🪙 {{ total }} GC</span>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <span class="text-secondary fw-bold fs-5">Total Neto:</span>
+                <span class="fs-3 fw-bold text-warning">🪙 {{ total }} GC</span>
+            </div>
+            
+            <div class="alert alert-secondary d-flex align-items-center p-2 small mb-4 border-0 bg-light text-muted" role="alert">
+                <span class="me-2">🔒</span>
+                <div>Entorno seguro. El importe se deducirá directamente del balance de tu Wallet.</div>
+            </div>
+
+            <form action="{{ url_for('checkout') }}" method="POST" class="m-0">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                <button type="submit" class="btn btn-dark btn-lg fw-bold w-100 shadow-sm py-3">
+                    Confirmar Compra Segura
+                </button>
+            </form>
+            
+            <div class="text-center mt-3">
+                <a href="/" class="text-muted small fw-bold text-decoration-none hover-underline">← Volver al catálogo</a>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+{% else %}
+<div class="text-center py-5 bg-white rounded-3 shadow-sm border border-top border-warning border-4 max-w-md mx-auto">
+    <p class="text-muted fs-4 mb-4">Tu carrito de compras está vacío actualmente.</p>
+    <a href="/" class="btn btn-dark fw-bold px-4 shadow-sm">
+        Volver al Mercado
+    </a>
+</div>
+{% endif %}
+
+<style>
+    .transition-transform { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .transition-transform:hover { transform: translateY(-3px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; }
+    .hover-underline:hover { text-decoration: underline !important; }
+</style>
+
+{% endblock %}

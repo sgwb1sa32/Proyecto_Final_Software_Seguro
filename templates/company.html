@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="p-4 text-center bg-white rounded-3 shadow-sm border-top border-dark border-4 mb-5">
+    <h1 class="text-body-emphasis fw-bold mb-2">🏢 Panel de Empresa</h1>
+    <p class="lead text-muted">Gestiona tu catálogo de productos y ajusta los precios en tiempo real.</p>
+</div>
+
+<h3 class="fw-bold mb-4 border-bottom pb-2">Mis Productos en Venta</h3>
+
+<div class="row g-4 mb-5">
+    {% for product in products %}
+    <div class="col-12">
+        <div class="card shadow-sm border-0 border-start border-warning border-5">
+            <div class="row g-0 align-items-stretch">
+                
+                <div class="col-md-3">
+                    <img src="{{ product.img }}" class="img-fluid rounded-start h-100 w-100" style="object-fit: cover; min-height: 250px;" alt="{{ product.name }}">
+                </div>
+                
+                <div class="col-md-5 p-4 d-flex flex-column justify-content-center">
+                    <h4 class="card-title fw-bold text-dark">{{ product.name }}</h4>
+                    <p class="card-text text-secondary mb-4">{{ product.description }}</p>
+                    <div class="mt-auto">
+                        <span class="fs-4 fw-bold text-warning bg-light px-3 py-2 rounded shadow-sm border">
+                            🪙 {{ product.price }} GC
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 p-4 bg-light border-start d-flex flex-column justify-content-center">
+                    <form method="POST" class="m-0">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-dark">Nuevo Precio (GC):</label>
+                            <input type="number" name="price" value="{{ product.price }}" required min="1" class="form-control border-secondary">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold text-dark">Editar Descripción:</label>
+                            <textarea name="description" class="form-control border-secondary" rows="3" required>{{ product.description }}</textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-dark fw-bold w-100 shadow-sm mt-2">
+                            Guardar Cambios
+                        </button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="col-12 text-center py-5 bg-white rounded shadow-sm border">
+        <p class="text-muted fs-4 mb-3">Aún no tienes productos publicados en GODOYCRUZ.</p>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
