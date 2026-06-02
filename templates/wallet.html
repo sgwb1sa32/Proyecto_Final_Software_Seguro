@@ -1,97 +1,198 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="p-5 text-center bg-white rounded-3 shadow-sm border-top border-warning border-4 mb-5">
-    <h1 class="text-body-emphasis fw-bold mb-3">Cripto Wallet GODOYCRUZ</h1>
-    <p class="lead text-muted">Gestiona tus fondos de forma descentralizada y segura.</p>
-    
-    <div class="d-inline-flex align-items-center bg-light p-3 rounded-pill shadow-sm border mt-3">
-        <span class="fs-4 text-secondary me-3">Balance Total:</span>
-        <span class="display-6 fw-bold text-warning mb-0">🪙 {{ wallet_balance }} GC</span>
+{% set coin_count = coins | length %}
+{% set pct = (coin_count / 100 * 100) | int %}
+{% if pct >= 90 %}{% set level = 'danger' %}{% set level_color = '#dc3545' %}
+{% elif pct >= 70 %}{% set level = 'warning' %}{% set level_color = '#fd7e14' %}
+{% else %}{% set level = 'success' %}{% set level_color = '#198754' %}{% endif %}
+
+<div class="container py-4">
+
+  <!-- CABECERA -->
+  <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+    <div>
+      <h2 class="fw-bold mb-0">💳 Mi Wallet</h2>
+      <small class="text-muted font-monospace">{{ user_data.public_key[:32] if user_data.public_key else '' }}...</small>
     </div>
+    <a href="/coins" class="btn btn-outline-warning fw-bold">
+      ✂️ MERGE &amp; SPLIT
+    </a>
+  </div>
+
+  <!-- FILA SUPERIOR: balance + capacidad -->
+  <div class="row g-3 mb-4">
+
+    <!-- Balance -->
+    <div class="col-12 col-md-5">
+      <div class="card shadow-sm border-0 border-top border-warning border-4 h-100">
+        <div class="card-body p-4">
+          <p class="text-muted small fw-bold text-uppercase mb-1">Balance total</p>
+          <h1 class="fw-bold text-warning mb-0" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">
+            🪙 {{ "%.2f"|format(balance) }} <span class="fs-5 text-muted">GC</span>
+          </h1>
+          <hr class="my-3">
+          <div class="d-flex justify-content-between text-muted small">
+            <span>Monedas activas</span>
+            <span class="fw-bold text-{{ level }}">{{ coin_count }} / 100</span>
+          </div>
+          <div class="d-flex justify-content-between text-muted small">
+            <span>Slots disponibles</span>
+            <span class="fw-bold">{{ 100 - coin_count }}</span>
+          </div>
+          <div class="d-flex justify-content-between text-muted small">
+            <span>Comisión por tx</span>
+            <span class="fw-bold">2%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Capacidad de wallet -->
+    <div class="col-12 col-md-7">
+      <div class="card shadow-sm border-0 border-top border-{{ level }} border-4 h-100">
+        <div class="card-body p-4">
+          <div class="d-flex justify-content-between align-items-start mb-3">
+            <div>
+              <p class="text-muted small fw-bold text-uppercase mb-0">Capacidad de Wallet</p>
+              <p class="text-muted small mb-0">Protocolo GodoyCoin — máx. 100 monedas</p>
+            </div>
+            <div class="text-end">
+              <span class="display-6 fw-bold text-{{ level }}">{{ coin_count }}</span>
+              <span class="text-muted fs-5">/100</span>
+            </div>
+          </div>
+
+          <!-- Barra de progreso grande -->
+          <div class="progress mb-3" style="height: 20px; border-radius: 999px; background: #e9ecef;">
+            <div class="progress-bar bg-{{ level }} progress-bar-striped progress-bar-animated fw-bold"
+                 role="progressbar"
+                 style="width: {{ pct }}%; border-radius: 999px; font-size: .8rem; transition: width .6s ease;"
+                 aria-valuenow="{{ coin_count }}" aria-valuemin="0" aria-valuemax="100">
+              {% if pct > 15 %}{{ pct }}%{% endif %}
+            </div>
+          </div>
+
+          <!-- Alerta según nivel -->
+          {% if level == 'danger' %}
+          <div class="alert alert-danger py-2 px-3 mb-0 small fw-bold">
+            🚨 Límite casi alcanzado. Usa <a href="/coins" class="alert-link">MERGE</a> para liberar slots antes de recibir más monedas.
+          </div>
+          {% elif level == 'warning' %}
+          <div class="alert alert-warning py-2 px-3 mb-0 small fw-bold">
+            ⚠️ Wallet al {{ pct }}% de capacidad. Considera hacer <a href="/coins" class="alert-link">MERGE</a> para agrupar monedas pequeñas.
+          </div>
+          {% else %}
+          <div class="alert alert-success py-2 px-3 mb-0 small fw-bold">
+            ✅ Wallet en buen estado — {{ 100 - coin_count }} slots libres disponibles.
+          </div>
+          {% endif %}
+
+          <!-- Mini lista de monedas (máx 5 visibles) -->
+          {% if coins %}
+          <div class="mt-3">
+            <p class="text-muted small fw-bold text-uppercase mb-2">Monedas recientes</p>
+            {% for coin in coins[:5] %}
+            <div class="d-flex justify-content-between align-items-center py-1 border-bottom">
+              <span class="font-monospace small text-muted">{{ coin.id[:24] }}...</span>
+              <span class="badge bg-warning text-dark fw-bold">🪙 {{ "%.4f"|format(coin.value) }} GC</span>
+            </div>
+            {% endfor %}
+            {% if coin_count > 5 %}
+            <p class="text-muted small text-center mt-2 mb-0">
+              ... y <a href="/coins" class="text-warning fw-bold">{{ coin_count - 5 }} monedas más</a>
+            </p>
+            {% endif %}
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILA: acciones -->
+  <div class="row g-3">
+
+    <!-- Comprar GC -->
+    <div class="col-12 col-md-4">
+      <div class="card shadow-sm border-0 border-top border-success border-4 h-100">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-1">💳 Comprar GC</h5>
+          <p class="text-muted small mb-3">Añade GodoyCoins desde tu tarjeta bancaria.</p>
+          <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="action" value="buy">
+            <div class="mb-3">
+              <label class="form-label text-muted small fw-bold">Cantidad (GC)</label>
+              <input type="number" name="amount" placeholder="Ej. 100" min="1" max="10000" step="1" required
+                     class="form-control form-control-lg bg-light">
+              <div class="form-text">Máximo 10,000 GC por operación.</div>
+            </div>
+            <button type="submit" class="btn btn-success btn-lg fw-bold w-100">
+              Comprar GodoyCoins
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vender GC -->
+    <div class="col-12 col-md-4">
+      <div class="card shadow-sm border-0 border-top border-danger border-4 h-100">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-1">🏦 Retirar a banco</h5>
+          <p class="text-muted small mb-3">Convierte tus GC de vuelta a euros.</p>
+          <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="action" value="sell">
+            <div class="mb-3">
+              <label class="form-label text-muted small fw-bold">Cantidad (GC)</label>
+              <input type="number" name="amount" placeholder="Ej. 50" min="1" step="1" required
+                     class="form-control form-control-lg bg-light">
+              <div class="form-text">Saldo disponible: {{ "%.2f"|format(balance) }} GC</div>
+            </div>
+            <button type="submit" class="btn btn-danger btn-lg fw-bold w-100">
+              Retirar a cuenta bancaria
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transferir -->
+    <div class="col-12 col-md-4">
+      <div class="card shadow-sm border-0 border-top border-primary border-4 h-100">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-1">↗️ Transferir GC</h5>
+          <p class="text-muted small mb-3">Envía GC a otro usuario. Comisión: 2% → Wallet Estado.</p>
+          <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="action" value="transfer">
+            <div class="mb-2">
+              <label class="form-label text-muted small fw-bold">Destinatario</label>
+              <select name="target" class="form-select bg-light">
+                {% for u in users_list %}
+                  {% if u != current_user and u != 'estado' %}
+                  <option value="{{ u }}">👤 {{ u }}</option>
+                  {% endif %}
+                {% endfor %}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-muted small fw-bold">Cantidad (GC)</label>
+              <input type="number" name="amount" placeholder="Ej. 20" min="1" step="1" required
+                     class="form-control bg-light">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg fw-bold w-100">
+              Enviar GodoyCoins
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
-
-<div class="row g-4 mb-5">
-    
-    <div class="col-12 col-md-4">
-        <div class="card h-100 shadow border-0 border-top border-success border-4 transition-transform">
-            <div class="card-body d-flex flex-column p-4">
-                <h4 class="card-title fw-bold mb-4 text-dark">Comprar GC</h4>
-                <form method="POST" class="mt-auto">
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-                    <input type="hidden" name="action" value="buy">
-                    
-                    <div class="mb-4">
-                        <label class="form-label text-secondary fw-bold">Cantidad a añadir:</label>
-                        <input type="number" name="amount" placeholder="Ej. 100" min="1" required class="form-control form-control-lg bg-light">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-dark btn-lg fw-bold w-100 shadow-sm">
-                        Pagar con Tarjeta
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-4">
-        <div class="card h-100 shadow border-0 border-top border-danger border-4 transition-transform">
-            <div class="card-body d-flex flex-column p-4">
-                <h4 class="card-title fw-bold mb-4 text-dark">Vender GC a €</h4>
-                <form method="POST" class="mt-auto">
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-                    <input type="hidden" name="action" value="sell">
-                    
-                    <div class="mb-4">
-                        <label class="form-label text-secondary fw-bold">Cantidad a retirar:</label>
-                        <input type="number" name="amount" placeholder="Ej. 50" min="1" required class="form-control form-control-lg bg-light">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-dark btn-lg fw-bold w-100 shadow-sm">
-                        Retirar a Banco
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-12 col-md-4">
-        <div class="card h-100 shadow border-0 border-top border-primary border-4 transition-transform">
-            <div class="card-body d-flex flex-column p-4">
-                <h4 class="card-title fw-bold mb-4 text-dark">Transferir a Usuario</h4>
-                <form method="POST" class="mt-auto">
-                    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
-                    <input type="hidden" name="action" value="transfer">
-                    
-                    <div class="mb-3">
-                        <label class="form-label text-secondary fw-bold">Destinatario:</label>
-                        <select name="target" class="form-select form-select-lg bg-light fw-semibold">
-                            {% for u in users_list %}
-                                {% if u != current_user %}
-                                <option value="{{ u }}">👤 {{ u }}</option>
-                                {% endif %}
-                            {% endfor %}
-                        </select>
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label class="form-label text-secondary fw-bold">Cantidad:</label>
-                        <input type="number" name="amount" placeholder="Ej. 20" min="1" required class="form-control form-control-lg bg-light">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-dark btn-lg fw-bold w-100 shadow-sm">
-                        Enviar GC
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<style>
-    .transition-transform { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .transition-transform:hover { transform: translateY(-5px); box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; }
-</style>
 
 {% endblock %}

@@ -1,0 +1,504 @@
+[
+  {
+    "index": 0,
+    "timestamp": 0.0,
+    "transactions": [
+      {
+        "type": "GENESIS",
+        "sender": "GENESIS",
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "0aba2e1e19de5542d459ce66838c5a41ab49898d33bbcc55b0503326ecb2212b",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "bc1e3fe6e5d6bb9b1ed822f48db3f08570fb765e10e7919333ad3e7fd0eac839",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "f9703145654e42e4bc6e037eed6b4ea6e097e7d7b75c3821afa863a14ad6833b",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "f96d19bd9202f1baf599987949e7d001345794c1d7cdc94b41335b7b249b9417",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "486e4fd70ba9976e5649498761962e5157929c7541cb9b4ba608d45aed24fff1",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "155dd01a64b05d40a5fd0a65be2fa46c4625211192fc5165a2be04e35092ab22",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "ac7a2e3ea8c33f302c9d93486f878b013eca2c68ecec581161219c38086a2160",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "3164c5240f163c3fc1a6745ec8ab48c2885bb22d27d0bd45c2d434eada3972f2",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "f10be6c6466571ebac2da5428a0719215e05411a3ec0ce6a91913d62906ab4fb",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "1e6d28917f62e43a4b73c4ace30a21d90e0b539dcfc26bfa16b6e9a8a468b6c0",
+            "value": 100.0,
+            "owner": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e"
+          },
+          {
+            "id": "c0de0666f7af19fa5fd3c9577e0d941c7de16af457f43bf74243d7bebc35fdb0",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "1fb8061f65d006eaba1ca3f202b28e67d0c34da248039fb39137402920b3315b",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "fe47673f103fa19016fc35aab59400c3caffa57d5f1b4f7cb3625d68ae9802b4",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "e06dd60bc36ab50ffd852f7ae3ccaec6d7f985d089f64d78df558aff41217c3f",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "627d42f9ba0cca839ff09551a6644f41d138546ae62981cbc5c3449dd5a1baab",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "e591f5328e750dbc28c4687be42a8c4d6db1e1bd30087db7f7a8194b5b7a83f8",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "ec206528efe6bfd24ea7a5ce6d025b52808824e1a2964024f61ceb8b03da1bea",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "9e741863e7337fe16f208837191296573df0b5775bcf804ff7ce7e02558c28ba",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "ee74905dd241ec2ad8804356a0fd9e316726f2d897627e18e1867e060f6ac7e5",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "648b1d768fb9e8623a048ae2667fa371ab033656262781e324065ba736b5dd32",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "adcdd8504885bdb36354dbb335a1a6618d973d87837897531d7856720601044d",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "bd77610cd011608e823329c8765e9939edba25331c0eae9568b821cc99b94944",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "4dad7857830f5f212d55ee8b00ca02e21d8c97268c72cb3ad71ec382816d6625",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "d7419f46590a7a6da49bb8670d782915150128b60882a4dd909d777b547317ea",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "ab0ef0beac8acb3ad959ea01c6dbc18813af439c0051243168e0967e1acf5690",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "fda6a37c4bf668ff806a8f304a9a0e21ba843cabe9fe14c1b237901c133b991f",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "121ccd8db7812ab88c7fedd5869360adb2a39e513f9cab20183847fa65f2f2b1",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "1dc10781973d3e8ec269ac7934366fcc9873c250dce11ce81d79847be40c8195",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "53fd461b1e1154f8d1428dd9669c088b7a0da31fc42d550da7a84ab52686ba0c",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "7a236a6b155b4bd0cd2e5ca036531fae1595c387389f3b667aa6b70b768ff1d8",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "83cab899e94ce685fcd437a48269e1d6043d7297f7a28e6d36f368c2d5ff5561",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "258272feb58604cdb892ae69d3701ce4415e1b3e1df32f195f186f941cdda8ac",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "1383dad5267892752307b90ce4b7f6166c0a9419fd0e6bc41fef9991cd59d70f",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "75b6fc129ea0c970013641fcea25aca86f3833605ff8413f98af199c038bd115",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "7d5d523669cd2c1e94640c16cd7fdc8c85f366afa0151dc270dab617440b9782",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "c85d847af95f138767ce6bdf2a5918944fe9caf0264b729f074735364afb5de7",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "1c7d0dcf5580dc1ed546156a227693b1852d27d1b4b41bae891499cea4905291",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "7f1c56f20f1893d1c3a3e50c994555b78de2bf684147247d57ee74e9e47474a6",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "be708ac8d5b1e3658a700d52616fe6029de65f0c3dd4ffb21f34b304745c8d37",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "7b1ef41cbee54546ee7c33ee29bdf568b1e0ab84993d41b2c697f007100af8cb",
+            "value": 100.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "fb0b7918d3de31f92a791f365932634adcdfc18dd1a6115e7e1a23b5626a68aa",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "0f553c1bf27fef8a86de9d5e057ba4b6b8ebeb7d9cda402401a0a1f7eb23b595",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "9f8f982aa23cadfca6e0e68675bd22a214a40201b5a34a1596812c471e02af4a",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "444873a0fc148686b65e93d9f9d1e885edb624186493e06584cfb15b1f5558f5",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "70cec69116d5a72c60700bec55aa57711544614d607d17a53347f41c8c47140e",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "528e155b9511aeba32bb88f1a0ae01edf0efcd9bc7f8b2adf8e883f2cb6a7cc1",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "8a500cd45beb13a6aa11d92a60269396ff2d6583897e9c831d8c7bad7dc2c947",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "d4b106a7161b71d3f2874392b46fe67cf30b2b7d1f3fb0abfd8116e865635c18",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "f59d2b2d73dc45bdd2c780b53a408a3384a5dbd63e890fe3c12135c47101e8c4",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "50a293c1982e3c348d0918b506098e41f949ae5d3ce5368e28fa266dac35dbb2",
+            "value": 100.0,
+            "owner": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596"
+          },
+          {
+            "id": "948f8ab9b11049d0ae48da177b87ccb6345d9037ce6636c01b6e35fa1c0cd396",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "fe3b0a49dc44ca666ae8f345107f2308a099035053ab64bbbbd5284c6ddac787",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "8260589527bc589b0daa5f3823a08ff190df0e4c6bb03caf9d947e5151ab540b",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "32760154a2cadd1f7a1c07951615eaa61137b4835fca9103f9f5e1bda917ce68",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "bf7d6304b9f002731e5bfa05352c041828e19ce0375edfc7efb12bc5d150bdda",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "c25e92b44b230667cec9a2bda7494b0e03f25c65f810a9460ec506af1effcc60",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "5c6f756c7ab786618d8c7a0676b5c036bb331e81beb4e2646b32736d5faf5b5b",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "fddda95e3f339b5ad1b11974c83d39d1f4b9a2d7bd7682f40b0267017c130b8a",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "5937ff88d582381393de3c17ba528b529686afec72b045c7b2c84a13eca7882e",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "18b5c053173d42e6b5681970dbbe5b8a0850b5a565d72bfba0ce6f30bd32f141",
+            "value": 100.0,
+            "owner": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7"
+          },
+          {
+            "id": "76b4084902eba9d305a515087cfa7304ae9040e4f7c3dfbcf712f69ae29303b9",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "09b2c266f10c6f6e33f3b4308fd22053140847efa6192601fb7d6ffe1051551d",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "6d124ef13d1cba41d6e8839986f7fcc2e5ae65ff5bd592962621a89d02cf6d8d",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "6bdc5055cec47a0736a219d1b76412199e73b6f26a70e1adcedb9048a7c8e41c",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "63b994023aa713f4d835ec65371f01d4ed23f7c331639e0ab5412b2e089a3b51",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "b5322005afb54f28794e6c40addbd3cabeb21a72bbb4d2c1ea3b14d28dbe90b6",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "3c662256f64433f6ac55fbfac02bb563b0939ee7e2f84b29b7c760ea7ddd30d0",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "515bc94c2e6ea7efd0a34de49e7c7b9513298b51028204d667cc64563341eef6",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "ab19dd4ca63fd4f99db3d07ca5c64e953d5ce0d9fc0c0e20ba82fa68e4613a12",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          },
+          {
+            "id": "f8f264fe7d418f5cf216a94514d96bb7b6fa07050165e08f7146c51ee2a2954b",
+            "value": 100.0,
+            "owner": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668"
+          }
+        ],
+        "timestamp": 0.0,
+        "signature": "GENESIS_SIGNATURE",
+        "tx_id": "genesis_tx"
+      }
+    ],
+    "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "9762087e2b63b59e54c9cb0272ae1dd67ce0ead54c97037e5c7606f310b66227"
+  },
+  {
+    "index": 1,
+    "timestamp": 1780435979.145784,
+    "transactions": [
+      {
+        "type": "TRANSFER",
+        "sender": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830",
+        "inputs": [
+          {
+            "id": "c0de0666f7af19fa5fd3c9577e0d941c7de16af457f43bf74243d7bebc35fdb0",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          },
+          {
+            "id": "1fb8061f65d006eaba1ca3f202b28e67d0c34da248039fb39137402920b3315b",
+            "value": 100.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "25e293b510ca0aaffa36c9dddf44b209200342ed5e9bf4b22e0b3e61ff985a36",
+            "value": 150.0,
+            "owner": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293"
+          },
+          {
+            "id": "9eb94038139148512d39f958753bebeb0445919b6434cb2b781bbdaaeaf91b7e",
+            "value": 3.0,
+            "owner": "0415a67854a5da08577f284577465ae15919e1773a46e74254a1f44deb78e35b57448474e7201d009ecd1e9574faf360ab0c944439f66cfdda88bbd190cd9f02c8"
+          },
+          {
+            "id": "2c6aaf179c8eb6196f24248c3729e2463274e03b8b559d5a54c5653384f55e27",
+            "value": 47.0,
+            "owner": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830"
+          }
+        ],
+        "timestamp": 1780435979.1379044,
+        "signature": "304402203337d247efcf8c465aa7e4de0f3dd2f0743a844c2d4c6198d5f8c7840e00dd1d02202710d159cc0b309c5755799b8417a98de6f7c8516a5dbffdd5b811841fe545ed",
+        "tx_id": "20fef28e686ce0fdca29ad3e697d5c69bf9bf8d822641d197c142e8bfc89ec63"
+      }
+    ],
+    "previous_hash": "9762087e2b63b59e54c9cb0272ae1dd67ce0ead54c97037e5c7606f310b66227",
+    "hash": "a025f06d8e050460d30d8845c89c99b69d6e79aaf5c0e46b284f5a8240da010b"
+  },
+  {
+    "index": 2,
+    "timestamp": 1780436170.0888002,
+    "transactions": [
+      {
+        "type": "MINT",
+        "sender": "SISTEMA",
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "da83b4f0b9bf23624fc06986665717f9cdd64cc4cc1bca14d02d21cd3f91daff",
+            "value": 100.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          }
+        ],
+        "timestamp": 1780436170.0888002,
+        "signature": "MINT_AUTHORIZED",
+        "tx_id": "cf7da9359fbcf22cafd10712ccaa4353f8f32e6e585ec99590296f6b823d95aa"
+      }
+    ],
+    "previous_hash": "a025f06d8e050460d30d8845c89c99b69d6e79aaf5c0e46b284f5a8240da010b",
+    "hash": "9f0ae2ee9a8f73633437051d4dbe076921c441847ec7ba3a40058c78c3ee0282"
+  },
+  {
+    "index": 3,
+    "timestamp": 1780436176.7930489,
+    "transactions": [
+      {
+        "type": "MINT",
+        "sender": "SISTEMA",
+        "inputs": [],
+        "outputs": [
+          {
+            "id": "98683d00b3dfec11f68e0234dc295b1f7a3099608f97fd0a742819e2e8c41710",
+            "value": 350.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          }
+        ],
+        "timestamp": 1780436176.7930489,
+        "signature": "MINT_AUTHORIZED",
+        "tx_id": "ba969d3f5ab2eb49b3f0a01713a49248161faa2c6d3a7d1940839715d9d534b2"
+      }
+    ],
+    "previous_hash": "9f0ae2ee9a8f73633437051d4dbe076921c441847ec7ba3a40058c78c3ee0282",
+    "hash": "fb63405527d389792b249e56f11d112a1882495419aaace83f718762d2176d37"
+  },
+  {
+    "index": 4,
+    "timestamp": 1780436194.7021115,
+    "transactions": [
+      {
+        "type": "SPLIT",
+        "sender": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d",
+        "inputs": [
+          {
+            "id": "98683d00b3dfec11f68e0234dc295b1f7a3099608f97fd0a742819e2e8c41710",
+            "value": 350.0,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          }
+        ],
+        "outputs": [
+          {
+            "id": "3b1cba65cc858789f6ddb2ff9a56233d84cffc57327e3416cd6e6c228adfcc49",
+            "value": 114.33333333,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "007ed4e29e2fbbf103778e21de7b7c30fabb86a31e986ed1105d284269515770",
+            "value": 114.33333333,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "db4acd78807e9f3e11b8d1c0c4d784a09826ae12516c46ce6b4a5286d4ff7164",
+            "value": 114.33333333,
+            "owner": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d"
+          },
+          {
+            "id": "e8663d7dda51c31134cf84c78385a6802a587e110c857f6291f22aea7517017b",
+            "value": 7.0,
+            "owner": "0415a67854a5da08577f284577465ae15919e1773a46e74254a1f44deb78e35b57448474e7201d009ecd1e9574faf360ab0c944439f66cfdda88bbd190cd9f02c8"
+          }
+        ],
+        "timestamp": 1780436194.6114938,
+        "signature": "3045022100ee3dd1fe6c0961563e56576f9c91fe8f14133b6b954925e8f2d09a098763171c02201686da1d19c23f671d412dc3f67657178a6b38ea714e90f49e76c1cd1f2acb08",
+        "tx_id": "adcef37d867b63e7920b74c4a74d4a2714fce09994777c29ef2521e3cc653fa5"
+      }
+    ],
+    "previous_hash": "fb63405527d389792b249e56f11d112a1882495419aaace83f718762d2176d37",
+    "hash": "794403320b1d47d003d7a743424833d0c9e7766231acccb229375a294f769344"
+  }
+]

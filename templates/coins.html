@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container py-4">
+
+  <div class="d-flex align-items-center justify-content-between mb-4 flex-wrap gap-2">
+    <div>
+      <h2 class="fw-bold mb-0">✂️ MERGE &amp; SPLIT</h2>
+      <small class="text-muted">Gestiona tus monedas individuales</small>
+    </div>
+    <a href="/wallet" class="btn btn-outline-secondary">← Volver a Wallet</a>
+  </div>
+
+  {% set coin_count = coins | length %}
+  {% set pct = (coin_count / 100 * 100) | int %}
+  {% if pct >= 90 %}{% set level = 'danger' %}
+  {% elif pct >= 70 %}{% set level = 'warning' %}
+  {% else %}{% set level = 'success' %}{% endif %}
+
+  <!-- Barra de capacidad compacta -->
+  <div class="card shadow-sm border-0 border-top border-{{ level }} border-3 mb-4">
+    <div class="card-body py-3 px-4">
+      <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="fw-bold small text-uppercase text-muted">Capacidad de Wallet</span>
+        <span class="fw-bold text-{{ level }}">{{ coin_count }} / 100 monedas</span>
+      </div>
+      <div class="progress" style="height: 12px; border-radius: 999px;">
+        <div class="progress-bar bg-{{ level }} progress-bar-striped"
+             style="width: {{ pct }}%; border-radius: 999px;"
+             role="progressbar" aria-valuenow="{{ coin_count }}" aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </div>
+      {% if level == 'danger' %}
+      <p class="text-danger small fw-bold mb-0 mt-2">🚨 Límite casi alcanzado. Fusiona monedas para liberar espacio.</p>
+      {% elif level == 'warning' %}
+      <p class="text-warning small fw-bold mb-0 mt-2">⚠️ Wallet al {{ pct }}% — considera hacer MERGE.</p>
+      {% else %}
+      <p class="text-success small mb-0 mt-2">✅ {{ 100 - coin_count }} slots disponibles.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if coins %}
+  <div class="row g-4">
+
+    <!-- MERGE -->
+    <div class="col-12 col-lg-6">
+      <div class="card shadow-sm border-0 border-top border-success border-4 h-100">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-1">🔀 MERGE — Fusionar monedas</h5>
+          <p class="text-muted small mb-3">
+            Selecciona 2 o más monedas para convertirlas en una sola.<br>
+            Se aplica una comisión del <strong>2%</strong> sobre el valor total.
+          </p>
+          <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="action" value="merge">
+            <div class="mb-3" style="max-height: 300px; overflow-y: auto;">
+              {% for coin in coins %}
+              <div class="form-check border rounded p-2 mb-2 bg-light">
+                <input class="form-check-input" type="checkbox" name="coin_ids"
+                       value="{{ coin.id }}" id="m{{ loop.index }}">
+                <label class="form-check-label w-100" for="m{{ loop.index }}">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="font-monospace small text-muted">{{ coin.id[:20] }}...</span>
+                    <span class="badge bg-warning text-dark fw-bold">🪙 {{ "%.4f"|format(coin.value) }} GC</span>
+                  </div>
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+            <button type="submit" class="btn btn-success fw-bold w-100">
+              Fusionar seleccionadas
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPLIT -->
+    <div class="col-12 col-lg-6">
+      <div class="card shadow-sm border-0 border-top border-primary border-4 h-100">
+        <div class="card-body p-4">
+          <h5 class="fw-bold mb-1">✂️ SPLIT — Dividir moneda</h5>
+          <p class="text-muted small mb-3">
+            Elige una moneda y en cuántas partes dividirla.<br>
+            Se aplica una comisión del <strong>2%</strong> sobre el valor total.<br>
+            <span class="text-danger small">⚠️ No puedes superar el límite de 100 monedas.</span>
+          </p>
+          <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+            <input type="hidden" name="action" value="split">
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-muted">Moneda a dividir</label>
+              <select name="coin_id" class="form-select bg-light">
+                {% for coin in coins %}
+                <option value="{{ coin.id }}">
+                  🪙 {{ "%.4f"|format(coin.value) }} GC — {{ coin.id[:24] }}...
+                </option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold text-muted">
+                Número de partes (2–10)
+              </label>
+              <input type="number" name="parts" min="2" max="10" value="2"
+                     class="form-control bg-light">
+              <div class="form-text">
+                Tendrás {{ coin_count }} - 1 + N monedas tras el split. Máximo 100.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary fw-bold w-100">
+              Dividir moneda
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tabla completa de monedas -->
+  <div class="card shadow-sm border-0 mt-4">
+    <div class="card-body p-4">
+      <h5 class="fw-bold mb-3">
+        🪙 Todas mis monedas
+        <span class="badge bg-warning text-dark ms-2">{{ coin_count }}</span>
+      </h5>
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Valor</th>
+              <th>Identificador único</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for coin in coins %}
+            <tr>
+              <td class="text-muted small">{{ loop.index }}</td>
+              <td><span class="badge bg-warning text-dark fw-bold fs-6">🪙 {{ "%.4f"|format(coin.value) }} GC</span></td>
+              <td><code class="small text-muted">{{ coin.id }}</code></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  {% else %}
+  <div class="text-center py-5 bg-white rounded-3 shadow-sm border border-top border-warning border-4">
+    <p class="text-muted fs-5 mb-3">No tienes monedas en tu wallet.</p>
+    <a href="/wallet" class="btn btn-warning fw-bold px-4">
+      💳 Ir a la Wallet
+    </a>
+  </div>
+  {% endif %}
+
+</div>
+
+{% endblock %}

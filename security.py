@@ -4,13 +4,19 @@ import datetime
 import hashlib
 import hmac
 import json
+
 from functools import wraps
 
 from cryptography.fernet import Fernet
 from flask import abort, flash, redirect, request, session, url_for
 
 # --- CONFIGURACIÓN CRIPTOGRÁFICA ---
-ENCRYPTION_KEY = b'uF8D69i5X0mB5E3L6O8s2qY2T4h7U0v_wE-2Xm7QcE4='
+import os
+from cryptography.fernet import Fernet
+
+# Obtenemos la clave del entorno y la convertimos a BYTES (.encode())
+ENCRYPTION_KEY = os.environ.get("GODOYCRUZ_ENCRYPTION_KEY").encode('utf-8')
+
 cipher_suite = Fernet(ENCRYPTION_KEY)
 
 def encrypt_val(value):
